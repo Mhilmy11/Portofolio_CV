@@ -4,7 +4,19 @@ import ayraMassage from "../assets/images/WhatsApp Image 2024-08-27 at 15.30.47_
 import paeko from "../assets/images/5946hXBJK6DhLXwwfsyON9TIXCwOOgQDrDBi1p9d.png";
 import rac from "../assets/images/rac_logo.png";
 
-export default function Card({ img }) {
+export default function Card() {
+  const handleClickToAyraMassage = () => {
+    window.open("https://ayra-massage.netlify.app/");
+  };
+
+  const handleClickToPaekoId = () => {
+    window.open("https://www.paeko.id/");
+  };
+
+  const handleClickToRaConsulting = () => {
+    window.open("https://rac.co.id/");
+  };
+
   return (
     <div className=" flex gap-4 justify-center pt-8">
       <div className="relative group w-80 h-64 rounded-lg overflow-hidden shadow-lg">
@@ -20,7 +32,7 @@ export default function Card({ img }) {
         </div>
 
         <div className="absolute bottom-4 right-4 flex space-x-3 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-          <button>
+          <button onClick={handleClickToAyraMassage}>
             <FaLink className="text-xl text-gray-600 cursor-pointer hover:text-black" />
           </button>
         </div>
@@ -39,7 +51,7 @@ export default function Card({ img }) {
         </div>
 
         <div className="absolute bottom-4 right-4 flex space-x-3 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-          <button>
+          <button onClick={handleClickToPaekoId}>
             <FaLink className="text-xl text-gray-600 cursor-pointer hover:text-black" />
           </button>
         </div>
@@ -57,7 +69,7 @@ export default function Card({ img }) {
         </div>
 
         <div className="absolute bottom-4 right-4 flex space-x-3 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-          <button>
+          <button onClick={handleClickToRaConsulting}>
             <FaLink className="text-xl text-gray-600 cursor-pointer hover:text-black" />
           </button>
         </div>
