@@ -10,9 +10,10 @@ import {
   IoMailOutline,
   IoShareSocialOutline,
 } from "react-icons/io5";
-import profilePicture from "./assets/images/profile-picture.jpg";
 import { useRef } from "react";
 import Card from "./components/Card.js";
+import Home from "./pages/Home.js";
+import About from "./pages/About.js";
 
 export default function App() {
   const home = useRef(null);
@@ -64,277 +65,56 @@ export default function App() {
   return (
     <>
       <nav className=" bg-black fixed flex justify-center w-full py-2">
-        <Container>
-          <div className=" text-white flex justify-between">
-            <h1 className=" text-[30px] font-bold">Hilmy's CV</h1>
-            <div className=" flex items-center gap-8 text-gray-500 text-lg">
-              <button
-                onClick={handleClickToHome}
-                className=" transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 hover:text-green-400"
-              >
-                Home
-              </button>
-              <button
-                onClick={handleClickToAbout}
-                className=" transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 hover:text-green-400"
-              >
-                About
-              </button>
-              <button
-                onClick={handleClickToResume}
-                className=" transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 hover:text-green-400"
-              >
-                Resume
-              </button>
-              <button
-                onClick={handleClickToPortfolio}
-                className=" transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 hover:text-green-400"
-              >
-                Portfolio
-              </button>
-              <button
-                onClick={handleClickToContact}
-                className=" transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 hover:text-green-400"
-              >
-                Contact
-              </button>
-            </div>
+        <div className=" text-white flex justify-between px-20 w-full">
+          <h1 className=" text-[30px] font-bold">Hilmy's CV</h1>
+          <div className=" flex items-center gap-8 text-gray-500 text-lg">
+            <button
+              onClick={handleClickToHome}
+              className=" transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 hover:text-green-400"
+            >
+              Home
+            </button>
+            <button
+              onClick={handleClickToAbout}
+              className=" transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 hover:text-green-400"
+            >
+              About
+            </button>
+            <button
+              onClick={handleClickToResume}
+              className=" transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 hover:text-green-400"
+            >
+              Resume
+            </button>
+            <button
+              onClick={handleClickToPortfolio}
+              className=" transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 hover:text-green-400"
+            >
+              Portfolio
+            </button>
+            <button
+              onClick={handleClickToContact}
+              className=" transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 hover:text-green-400"
+            >
+              Contact
+            </button>
           </div>
-        </Container>
+        </div>
       </nav>
 
       <div className=" bg-black w-full">
         <Container>
-          <div ref={home} className=" flex items-center h-screen w-full">
-            <div className=" grid grid-rows-4">
-              <div>
-                <h1 className=" text-white font-bold text-[40px]">
-                  Muhammad Hilmy Setiawanto
-                </h1>
-              </div>
+          <section ref={home}>
+            <Home
+              handleClickToInstagram={handleClickToInstagram}
+              handleClickToTwitter={handleClickToTwitter}
+              handleClickToLinkin={handleClickToLinkin}
+              handleClickToGithub={handleClickToGithub}
+            />
+          </section>
 
-              <div>
-                <h2 className=" text-white text-2xl">
-                  Ready to learn and create
-                  <span className=" text-green-400"> Innovative</span>{" "}
-                  technology solutions.
-                </h2>
-              </div>
-
-              <div className=" text-white flex gap-6">
-                <button
-                  onClick={handleClickToTwitter}
-                  className=" transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 hover:bg-sky-400 media-icon w-10 h-10 rounded-full flex items-center justify-center"
-                >
-                  <IoLogoTwitter size={20} />
-                </button>
-                <button
-                  onClick={handleClickToInstagram}
-                  className=" transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 hover:bg-orange-500 media-icon w-10 h-10 rounded-full flex items-center justify-center"
-                >
-                  <IoLogoInstagram size={20} />
-                </button>
-                <button
-                  onClick={handleClickToLinkin}
-                  className=" transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 hover:bg-sky-600 media-icon w-10 h-10 rounded-full flex items-center justify-center"
-                >
-                  <IoLogoLinkedin size={20} />
-                </button>
-                <button
-                  onClick={handleClickToGithub}
-                  className=" transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 hover:bg-emerald-400 media-icon w-10 h-10 rounded-full flex items-center justify-center"
-                >
-                  <IoLogoGithub size={20} />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <section ref={about} className=" pt-[55px]">
-            <div className=" text-white pb-4">
-              <h1 className=" font-semibold flex items-center text-gray-400">
-                ABOUT{" "}
-                <div className=" bg-green-500 w-24 h-[2px] ml-4 rounded-md"></div>
-              </h1>
-              <h2 className=" font-bold text-[35px]">LEARN MORE ABOUT ME</h2>
-            </div>
-
-            <div className=" flex items-center">
-              <div className=" w-[350px]">
-                <img
-                  className=" rounded-lg"
-                  src={profilePicture}
-                  alt="profile-picture"
-                />
-              </div>
-
-              <div className=" text-white w-[700px] ml-16">
-                <h2 className=" font-semibold text-[33px] text-green-500">
-                  Junior FullStack Developer
-                </h2>
-                <p className=" my-3 text-lg">
-                  I am a Junior FullStack Developer with a keen interest in web
-                  application development and programming.
-                </p>
-                <div className=" flex gap-24 mb-4">
-                  <div>
-                    <div>
-                      <span className=" text-green-500 mr-3 text-[20px]">
-                        &#10148;
-                      </span>
-                      <span className=" font-semibold mr-3 text-lg">
-                        Birthday:
-                      </span>
-                      <span>3 November 2002</span>
-                    </div>
-                    <div>
-                      <span className=" text-green-500 mr-3 text-[20px]">
-                        &#10148;
-                      </span>
-                      <span className=" font-semibold mr-3 text-lg">
-                        Website:
-                      </span>
-                      <a href="http://localhost:3000/">www.localhost.com</a>
-                    </div>
-                    <div>
-                      <span className=" text-green-500 mr-3 text-[20px]">
-                        &#10148;
-                      </span>
-                      <span className=" font-semibold mr-3 text-lg">
-                        Phone:
-                      </span>
-                      <span>+62 81388761325</span>
-                    </div>
-                    <div>
-                      <span className=" text-green-500 mr-3 text-[20px]">
-                        &#10148;
-                      </span>
-                      <span className=" font-semibold mr-3 text-lg">City:</span>
-                      <span>Depok, West Java</span>
-                    </div>
-                  </div>
-                  <div>
-                    <div>
-                      <span className=" text-green-500 mr-3 text-[20px]">
-                        &#10148;
-                      </span>
-                      <span className=" font-semibold text-lg mr-2">Age:</span>
-                      <span>21</span>
-                    </div>
-                    <div>
-                      <span className=" text-green-500 mr-3 text-[20px]">
-                        &#10148;
-                      </span>
-                      <span className=" font-semibold text-lg mr-2">
-                        Degree:
-                      </span>
-                      <span>Junior</span>
-                    </div>
-                    <div>
-                      <span className=" text-green-500 mr-3 text-[20px]">
-                        &#10148;
-                      </span>
-                      <span className=" font-semibold text-lg mr-2">
-                        Email:
-                      </span>
-                      <span>setiawantojr@gmail.com</span>
-                    </div>
-                    <div>
-                      <span className=" text-green-500 mr-3 text-[20px]">
-                        &#10148;
-                      </span>
-                      <span className=" font-semibold text-lg mr-2">
-                        Freelance:
-                      </span>
-                      <span>Available</span>
-                    </div>
-                  </div>
-                </div>
-                <div className=" text-lg">
-                  <p className=" w-[640px]">
-                    I enjoy solving complex problems and continually learning to
-                    improve my skills in software development. With a solid
-                    foundation in front-end and back-end development, I strive
-                    to build efficient and user-friendly applications. I am also
-                    open to freelance projects and enjoy working in a team to
-                    create innovative solutions that meet user needs.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className=" text-white mt-[30px] pb-4">
-              <h1 className=" font-semibold flex items-center text-gray-400">
-                SKILLS{" "}
-                <div className=" bg-green-500 w-24 h-[2px] ml-4 rounded-md"></div>
-              </h1>
-              <h2 className=" font-bold text-[35px]">MY SKILLS</h2>
-            </div>
-
-            <div>
-              <div className=" text-white w-full flex justify-between">
-                <div>
-                  <div className=" flex w-[520px] justify-between text-xs pb-1">
-                    <p>HTML</p>
-                    <p>100%</p>
-                  </div>
-                  <div className=" bg-slate-700 w-[520px] h-3 rounded-lg">
-                    <div className=" bg-green-400 w-[520px] h-3 rounded-lg"></div>
-                  </div>
-                </div>
-                <div>
-                  <div className=" flex w-[520px] justify-between text-xs pb-1">
-                    <p>PHP</p>
-                    <p>40%</p>
-                  </div>
-                  <div className=" bg-slate-700 w-[520px] h-3 rounded-lg">
-                    <div className=" bg-green-400 w-[208px] h-3 rounded-lg"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div className=" text-white w-full flex justify-between py-10">
-                <div>
-                  <div className=" flex w-[520px] justify-between text-xs pb-1">
-                    <p>CSS</p>
-                    <p>100%</p>
-                  </div>
-                  <div className=" bg-slate-700 w-[520px] h-3 rounded-lg">
-                    <div className=" bg-green-400 w-[520px] h-3 rounded-lg"></div>
-                  </div>
-                </div>
-                <div>
-                  <div className=" flex w-[520px] justify-between text-xs pb-1">
-                    <p>WORDPRESS/CMS</p>
-                    <p>60%</p>
-                  </div>
-                  <div className=" bg-slate-700 w-[520px] h-3 rounded-lg">
-                    <div className=" bg-green-400 w-[312px] h-3 rounded-lg"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div className=" text-white w-full flex justify-between">
-                <div>
-                  <div className=" flex w-[520px] justify-between text-xs pb-1">
-                    <p>JAVASCRIPT</p>
-                    <p>80%</p>
-                  </div>
-                  <div className=" bg-slate-700 w-[520px] h-3 rounded-lg">
-                    <div className=" bg-green-400 w-[416px] h-3 rounded-lg"></div>
-                  </div>
-                </div>
-                <div>
-                  <div className=" flex w-[520px] justify-between text-xs pb-1">
-                    <p>FIGMA</p>
-                    <p>65%</p>
-                  </div>
-                  <div className=" bg-slate-700 w-[520px] h-3 rounded-lg">
-                    <div className=" bg-green-400 w-[338px] h-3 rounded-lg"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <section ref={about}>
+            <About />
           </section>
 
           <section ref={resume} className=" pt-[55px]">
