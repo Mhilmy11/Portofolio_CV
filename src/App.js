@@ -138,11 +138,8 @@ export default function App() {
             <div className=" text-white flex justify-between items-center">
               <h1 className=" text-[20px] font-bold">Hilmy's CV</h1>
               <div className="relative inline-block text-left">
-                <button
-                  onClick={toggleDropdown}
-                  className=" font-medium text-white bg-neutral-900 p-[3px] rounded-lg"
-                >
-                  <IoList size={20} />
+                <button onClick={toggleDropdown} className=" flex items-center">
+                  <IoList size={30} />
                 </button>
 
                 {isOpen && (
