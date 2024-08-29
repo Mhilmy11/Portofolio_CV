@@ -189,11 +189,11 @@ export default function Resume() {
                     <div className=" bg-green-400 rounded-full w-3 h-3 flex justify-center mt-0.5 mr-1">
                       <div className=" bg-green-400 w-0.5 h-[277px]"></div>
                     </div>
-                    <div className=" bg-green-400 rounded-full w-3 h-3 flex justify-center mt-[265px] mr-1">
+                    <div className=" bg-green-400 rounded-full w-3 h-3 flex justify-center mt-[264px] mr-1">
                       <div className=" bg-green-400 w-0.5 h-[180px]"></div>
                     </div>
-                    <div className=" bg-green-400 rounded-full w-3 h-3 flex justify-center mt-[156px] mr-1">
-                      <div className=" bg-green-400 w-0.5 h-10"></div>
+                    <div className=" bg-green-400 rounded-full w-3 h-3 flex justify-center mt-[151px] mr-1">
+                      <div className=" bg-green-400 w-0.5 h-8"></div>
                     </div>
                   </div>
                   <div>
@@ -250,7 +250,7 @@ export default function Resume() {
                         when sending or receiving
                       </li>
                     </div>
-                    <div className=" pt-5">
+                    <div className=" pt-5 text-xs">
                       <p className=" font-semibold">
                         PT. ENAKANS MEDIA TEKNOLOGI
                       </p>

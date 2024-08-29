@@ -91,7 +91,7 @@ export default function App() {
   return (
     <>
       <LaptopOrDesktop>
-        <nav className=" bg-black fixed flex justify-center w-full py-2">
+        <nav className=" bg-black fixed flex justify-center w-full py-2 z-10">
           <Container>
             <div className=" text-white flex justify-between w-full">
               <h1 className=" text-[30px] font-bold">Hilmy's CV</h1>
@@ -133,7 +133,7 @@ export default function App() {
       </LaptopOrDesktop>
 
       <Mobile>
-        <nav className=" bg-black fixed flex justify-center w-full py-2">
+        <nav className=" bg-black fixed flex justify-center w-full py-2 z-10">
           <MobileContainer>
             <div className=" text-white flex justify-between items-center">
               <h1 className=" text-[20px] font-bold">Hilmy's CV</h1>
