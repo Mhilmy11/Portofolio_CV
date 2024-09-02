@@ -41,12 +41,12 @@ export default function Portfolio() {
       <Mobile>
         <div className=" bg-black w-full pt-11">
           <MobileContainer>
-            <div className=" text-white">
+            <div className=" text-white pb-3">
               <h1 className=" font-semibold text-xs flex items-center text-gray-400">
                 PORTFOLIO
                 <div className=" bg-green-500 w-24 h-[2px] ml-4 rounded-md"></div>
               </h1>
-              <h2 className=" font-bold text-[20px]">
+              <h2 className=" font-bold text-[19px]">
                 CHECK OUT MY VARIOUS PORTFOLIOS
               </h2>
             </div>

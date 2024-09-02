@@ -2,6 +2,12 @@ import profilePicture from "../assets/images/profile-picture.jpg";
 import { useMediaQuery } from "react-responsive";
 import Container from "../components/Container";
 import MobileContainer from "../components/MobileContainer";
+import php from "../assets/icons/4375039_logo_php_icon.png";
+import wordpress from "../assets/icons/291686_wordpress_blog_logo_social_social media_icon.png";
+import react from "../assets/icons/1174949_js_react js_logo_react_react native_icon.png";
+import figma from "../assets/icons/7564187_figma_logo_brand_icon.png";
+import css from "../assets/icons/4202020_css3_html_logo_social_social media_icon.png";
+import laravel from "../assets/icons/4373205_laravel_logo_logos_icon.png";
 
 export default function About() {
   const LaptopOrDesktop = ({ children }) => {
@@ -299,7 +305,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className=" text-white pb-4">
+            <div className=" text-white pb-1">
               <h1 className=" font-semibold flex items-center text-xs text-gray-400">
                 SKILLS{" "}
                 <div className=" bg-green-500 w-24 h-[2px] ml-4 rounded-md"></div>
@@ -307,11 +313,15 @@ export default function About() {
               <h2 className=" font-bold text-[20px]">MY SKILLS</h2>
             </div>
 
-            <div>
-              <img src="" alt="" />
-              <img src="" alt="" />
-              <img src="" alt="" />
-              <img src="" alt="" />
+            <div className=" flex justify-center">
+              <div className=" grid grid-cols-3 gap-x-10 gap-y-4">
+                <img width={50} src={php} alt="php-logo" />
+                <img width={50} src={react} alt="react-logo" />
+                <img width={50} src={wordpress} alt="" />
+                <img width={50} src={figma} alt="" />
+                <img width={50} src={css} alt="" />
+                <img width={50} src={laravel} alt="" />
+              </div>
             </div>
           </MobileContainer>
         </div>
