@@ -81,7 +81,7 @@ export default function Home({
       </LaptopOrDesktop>
 
       <Mobile>
-        <div className=" text-white bg-black h-[250px] flex justify-center items-center">
+        <div className=" text-white bg-black h-[900px] flex justify-center items-center">
           <MobileContainer>
             <div>
               <div>
@@ -98,7 +98,7 @@ export default function Home({
                 </h2>
               </div>
 
-              <div className=" text-white flex gap-4 justify-center pt-4">
+              <div className=" text-white flex gap-4 justify-center pt-5">
                 <button
                   onClick={handleClickToTwitter}
                   className=" transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 hover:bg-sky-400 media-icon w-8 h-8 rounded-full flex items-center justify-center"
@@ -128,26 +128,6 @@ export default function Home({
           </MobileContainer>
         </div>
       </Mobile>
-
-      {/* <Tablet>
-        <div className=" text-white bg-black w-full h-[400px] flex justify-center items-center">
-          <div>
-            <div>
-              <h1 className=" text-white font-bold text-[40px] text-center">
-                Muhammad Hilmy Setiawanto
-              </h1>
-            </div>
-
-            <div>
-              <h2 className=" text-white text-2xl text-center">
-                Ready to learn and create
-                <span className=" text-green-400"> Innovative</span> technology
-                solutions.
-              </h2>
-            </div>
-          </div>
-        </div>
-      </Tablet> */}
     </>
   );
 }
